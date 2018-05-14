@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="XiaMiTabLayout">
+        <attr name="tab_normal_textSize" format="dimension"/>
+        <attr name="tab_select_textSize" format="dimension"/>
+    </declare-styleable>
+
+</resources>
