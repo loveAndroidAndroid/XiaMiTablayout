@@ -227,6 +227,17 @@ public class XiaMiTabLayout extends HorizontalScrollView {
                     nextChild.setTypeface(Typeface.DEFAULT);
                 }
             }
+            //解决点击间隔多个tab时 view的混乱变化
+            for (int i = 0;i<mTabContainer.getChildCount();i++){
+                View childView = mTabContainer.getChildAt(i);
+                if (childView!=selectedChild&&childView!=nextChild){
+                    TextView textView = (TextView) childView;
+                    textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mNormalTextSize);
+                    textView.setTypeface(Typeface.DEFAULT);
+                    textView.setTextColor(DEFAULT_NORMAL_TEXT_COLOR);
+                    textView.setPadding(ScreenUtils.dipToPx(getContext(), 5), 0, ScreenUtils.dipToPx(getContext(), 5), ScreenUtils.dipToPx(getContext(), 10));
+                }
+            }
 
         }
 
